@@ -1,0 +1,77 @@
+.steps {
+  &Header {
+    margin-bottom: 39px;
+    h2 {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 34px;
+      color: #141737;
+    }
+    p {
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      color: #7d8da7;
+    }
+  }
+  &Body {
+    &Row {
+      margin-bottom: 49px;
+      label {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        color: #141737;
+      }
+      &Btns {
+        display: flex;
+        margin-top: 4px;
+      }
+    }
+    &Pos {
+      margin-top: 26px;
+      label {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px;
+        color: #141737;
+      }
+      &Btns {
+        display: flex;
+        margin-top: 4px;
+      }
+    }
+    &Inputs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 80px;
+      margin-top: 21px;
+      max-width: 840px;
+      @media screen and (max-width: 680px) {
+        display: block;
+      }
+      &Item {
+        width: 100%;
+        margin-top: 5px;
+
+        @media screen and (max-width: 680px) {
+          margin-top: 28px;
+        }
+      }
+    }
+  }
+  &Footer {
+    border-top: 1px solid #e9eef4;
+    margin-top: 48px;
+    padding-top: 13px;
+    &Btn {
+      max-width: 840px;
+      display: flex;
+      justify-content: end;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  label {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    margin-bottom: 4px;
+  }
+  &Input {
+    display: flex;
+    border: 1px solid #e4e9ef;
+    height: 54px;
+    max-width: 840px;
+    border-radius: 12px;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 25px;
+      right: 24px;
+    }
+    @media screen and (max-width: 680px) {
+      width: 100%;
+      max-width: unset;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.stepper {
+  &Steps {
+    display: flex;
+    border-bottom: 1px solid #e9eef4;
+    padding-bottom: 24px;
+    width: 100%;
+    @media screen and (max-width: 680px) {
+      border-bottom: none;
+    }
+    &Item {
+      display: flex;
+      margin-right: 40px;
+      align-items: center;
+      @media screen and (max-width: 680px) {
+        display: none;
+      }
+      &Bullet {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #006aff;
+        height: 31px;
+        width: 31px;
+        border-radius: 3.0999999046325684px;
+        padding: 6px;
+        margin-right: 12px;
+        h5 {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 18px;
+          color: #ffffff;
+        }
+      }
+      &Lock {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 31px;
+        width: 31px;
+        border-radius: 3.0999999046325684px;
+        padding: 6px;
+        margin-right: 12px;
+        background: #e4e9ef;
+
+        h5 {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 18px;
+          color: #a5b4cb;
+        }
+      }
+
+      &Passed {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 31px;
+        width: 31px;
+        border-radius: 3.0999999046325684px;
+        padding: 6px;
+        margin-right: 12px;
+        background: #dceaff;
+
+        h5 {
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 18px;
+          color: #ffffff;
+        }
+      }
+    }
+
+    &Mobile {
+      display: none;
+      @media screen and (max-width: 680px) {
+        display: block;
+      }
+    }
+  }
+
+  &Label {
+    margin: 39px 0 19px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #a5b4cb;
+  }
+}
