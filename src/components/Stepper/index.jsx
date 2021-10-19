@@ -5,10 +5,10 @@ import styles from "./stepper.module.scss";
 
 const Stepper = ({ items, active }) => {
   return (
-    <div className={styles.stepper}>
+    <div className={styles.stepper} data-testid="stepper">
       <div className={styles.stepperSteps}>
         {items.map((item, index) => (
-          <>
+          <div key={`${item}${index}`}>
             <div className={styles.stepperStepsItem}>
               <div
                 className={
@@ -20,7 +20,7 @@ const Stepper = ({ items, active }) => {
                 }
               >
                 {active > index + 1 ? (
-                  <BlueTick className="fade-in" />
+                  <BlueTick className="fade-in" data-testid="check" />
                 ) : (
                   <h5>{index + 1}</h5>
                 )}
@@ -35,7 +35,7 @@ const Stepper = ({ items, active }) => {
                 </div>
               </div>
             )}
-          </>
+          </div>
         ))}
       </div>
       <p className={cx(styles.stepperLabel, "fade-in")}>

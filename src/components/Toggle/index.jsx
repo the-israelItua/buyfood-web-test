@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import cx from "classname";
 import styles from "./toggle.module.scss";
 import { LockIcon, ChevronUp, GreenTick, GoldLock } from "../../assets/svgs";
 import Button from "../Button";
@@ -21,7 +22,10 @@ const Toggle = () => {
         </div>
       </div>
       {show && (
-        <div className={styles.toggleExpanded}>
+        <div
+          className={cx(styles.toggleExpanded, "fade-in")}
+          data-testid="expanded-menu"
+        >
           <p className={styles.toggleExpandedHeader}>
             We only need access to your:
           </p>

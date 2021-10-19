@@ -6,9 +6,9 @@ import Stepper from "../components/Stepper";
 
 const Layout = ({ children, active }) => {
   return (
-    <section className={styles.layout}>
+    <section className={styles.layout} data-testid="layout">
       <div className={styles.layoutImage}>
-        <img src={BgImage} alt="background" />
+        <img src={BgImage} alt="background image" />
       </div>
       <div className={styles.layoutContent}>
         <div className={styles.layoutContentLogout}>

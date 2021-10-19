@@ -31,19 +31,26 @@ const StepOne = ({ updateStep, current }) => {
           </div>
         </div>
         {active === "bvn" ? (
-          <div className="fade-in">
-            <Input label="Bank Verification Number (11-digits)" type="number" />
+          <div className="fade-in" data-testid="bvn-option">
+            <Input
+              label="Bank Verification Number (11-digits)"
+              type="number"
+              autoFocus
+            />
             <Toggle />
           </div>
         ) : (
-          <form className={cx(styles.stepsBodyInputs, "fade-in")}>
+          <div
+            className={cx(styles.stepsBodyInputs, "fade-in")}
+            data-testid="personal-option"
+          >
             <div className={styles.stepsBodyInputsItem}>
-              <Input label="Account Number" type="number" />
+              <Input label="Account Number" type="number" autoFocus />
             </div>
             <div className={styles.stepsBodyInputsItem}>
               <Select label="Select Bank" />
             </div>
-          </form>
+          </div>
         )}
 
         <div className={styles.stepsFooter}>

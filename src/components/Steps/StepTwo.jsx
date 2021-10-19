@@ -10,10 +10,10 @@ const StepTwo = ({ updateStep, current }) => {
         <h2>Social Handles</h2>
         <p>Enter your business social media handles</p>
       </div>
-      <form>
+      <div>
         <div className={styles.stepsBodyInputs}>
           <div className={styles.stepsBodyInputsItem}>
-            <Input label="Choose your Abeg Tag (required)" socials />
+            <Input label="Choose your Abeg Tag (required)" socials autoFocus />
           </div>
           <div
             className={styles.stepsBodyInputsItem}
@@ -40,7 +40,7 @@ const StepTwo = ({ updateStep, current }) => {
             />
           </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 };
